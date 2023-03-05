@@ -1,5 +1,5 @@
 resource "random_pet" "pet" {
  prefix = "MRS"
- separato = "."
+ separator = "."
  length = 10
  }
