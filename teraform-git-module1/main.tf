@@ -17,7 +17,12 @@ resource "random_integer" "timeout" {
 }
 
 resource "null_resource" "timeout2" {
-
+  triggers = {
+    run_id = var.run_id
+  }
+  provisioner "local-exec" {
+    command = "env"
+  }
 }
 
 
