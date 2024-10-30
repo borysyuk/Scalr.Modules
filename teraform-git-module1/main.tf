@@ -16,6 +16,14 @@ resource "random_integer" "timeout" {
   }
 }
 
+resource "null_resource" "timeout" {
+  min = 32
+  max = 180
+
+  keepers = {
+    run_id = var.run_id
+  }
+}
 
 
 resource "null_resource" "env_vars" {
