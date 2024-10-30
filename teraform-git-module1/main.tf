@@ -16,7 +16,7 @@ resource "random_integer" "timeout" {
   }
 }
 
-resource "null_resource" "timeout2" {
+resource "null_resource" "timeout" {
   triggers = {
     run_id = var.run_id
   }
