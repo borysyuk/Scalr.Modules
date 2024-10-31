@@ -50,11 +50,11 @@ resource "null_resource" "env_vars" {
 }
 
 resource "scalr_tag" "example1" {
-  name       = "tag-name"
+  name       = "tag-name1"
 }
 
 resource "scalr_tag" "example2" {
-  name       = "tag-name"
+  name       = "tag-name2"
 }
 
 output "very_long" {
