@@ -1,3 +1,11 @@
+terraform {
+    required_providers {
+        scalr = {
+            source = "registry.scalr.io/scalr/scalr"
+            version= "2.1.1"
+        }
+    }
+}
 
 variable "run_id" {
   default = "run_id_2"
@@ -39,6 +47,14 @@ resource "null_resource" "env_vars" {
   provisioner "local-exec" {
     command = "env"
   }
+}
+
+resource "scalr_tag" "example1" {
+  name       = "tag-name"
+}
+
+resource "scalr_tag" "example2" {
+  name       = "tag-name"
 }
 
 output "very_long" {
