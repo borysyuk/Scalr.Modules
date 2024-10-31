@@ -26,6 +26,12 @@ resource "null_resource" "timeout2" {
 }
 
 
+resource "random_string" "timeout3" {
+  length           = 16
+  special          = true
+  override_special = "/@£$"
+}
+
 resource "null_resource" "env_vars" {
   triggers = {
     run_id = var.run_id
